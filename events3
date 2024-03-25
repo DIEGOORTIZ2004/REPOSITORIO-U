@@ -1,0 +1,10 @@
+  const buttonBar = document.querySelector('.button-bar');
+
+buttonBar.addEventListener('click', function(event) {
+  const target = event.target;
+
+  if (target.tagName === 'BUTTON') {
+    const color = target.getAttribute('data-color');
+    buttonBar.style.backgroundColor = color;
+  }
+});

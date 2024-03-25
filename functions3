@@ -1,0 +1,23 @@
+const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
+const para = document.createElement('p');
+
+function random(min, max) {
+    // Generate a random number between min (inclusive) and max (exclusive)
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+function chooseName(namesArray) {
+    // Get a random index within the length of the names array
+    const randomIndex = random(0, namesArray.length);
+    // Get the name at the randomly generated index
+    return namesArray[randomIndex];
+}
+
+// Call the chooseName function with the names array as parameter
+const randomName = chooseName(names);
+
+// Set the text content of the paragraph to the returned random name
+para.textContent = randomName;
+
+// Append the paragraph to the body of the HTML document
+document.body.appendChild(para);
